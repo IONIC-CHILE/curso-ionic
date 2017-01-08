@@ -1,0 +1,11 @@
+<ion-view view-title="Cursos">
+  <ion-content class="padding">
+          <div class="list">
+         <div class="item item-text-wrap item-thumbnail-left" ng-repeat="cur in cursos">
+             <img src="{{cur.img}}" alt="">
+             <h2>{{cur.nombre}}</h2>
+             <p>{{cur.descripcion}}</p>         
+         </div>
+     </div>
+  </ion-content>
+</ion-view>
