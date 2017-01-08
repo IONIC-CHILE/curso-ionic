@@ -1,6 +1,13 @@
 # curso-ionic
 Ejemplo de aplicaciones con ionic
 
+
+
+# Si queremos mostrar una imagen
+```
+$scope.imagenURL = 'http://placehold.it/250x250';
+```
+
 # ejemplo1
 Este ejemplo demuestra como utilizar variables
 
