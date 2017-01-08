@@ -372,3 +372,14 @@ tab-dash.html
 </ion-view>
 ```
 
+
+
+
+Login Facebook
+
+Links
+```
+http://ccoenraets.github.io/ionic-tutorial/ionic-facebook-integration.html
+
+```
+
