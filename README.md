@@ -8,6 +8,11 @@ Ejemplo de aplicaciones con ionic
 $scope.imagenURL = 'http://placehold.it/250x250';
 ```
 
+# Link de interes
+http://ngcordova.com/
+
+
+
 # ejemplo1
 Este ejemplo demuestra como utilizar variables
 
