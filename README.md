@@ -12,6 +12,18 @@ $scope.imagenURL = 'http://placehold.it/250x250';
 http://ngcordova.com/
 
 
+# Ejecutar el servidor de IONIC
+Nos colocamos en la carpeta del proyecto y en el CMD tecleamos 
+
+```
+inonic serve
+```
+
+# Google Chrome
+Pulsammos F12 para mostrar la consola
+
+![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/0.png?raw=true "Optional Title")
+
 
 # ejemplo1
 Este ejemplo demuestra como utilizar variables
