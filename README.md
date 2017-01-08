@@ -228,6 +228,11 @@ Este ejemplo veremos como utilizar la camara en IONIC
 ![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/6.png?raw=true "Optional Title")
 
 
+Adicionando el plugin de la camara
+```
+cordova plugin add cordova-plugin-camera
+```
+
 tab-dash.html
 ```
 <ion-view view-title="Camara">
