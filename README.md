@@ -290,7 +290,7 @@ http://ngcordova.com/docs/plugins/geolocation/
 https://developers.google.com/maps/documentation/javascript/tutorial?hl=es-419
 ```
 
-![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/7.png?raw=true "Optional Title")
+![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/7.jpg?raw=true "Optional Title")
 
 
 index.html
