@@ -281,3 +281,94 @@ angular.module('starter.controllers', [])
 ```
 
 
+# geolocalizacion
+Este ejemplo demuestra como utilizar los mapas
+
+Links
+```
+http://ngcordova.com/docs/plugins/geolocation/
+https://developers.google.com/maps/documentation/javascript/tutorial?hl=es-419
+```
+
+![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/7.png?raw=true "Optional Title")
+
+
+index.html
+```
+<script src="lib/ngcordova/ng-cordova.js"></script>
+```
+
+
+
+app.js
+```
+angular.module('geo', ['ionic','ngCordova', 'starter.controllers', 'starter.services'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+      cordova.plugins.Keyboard.disableScroll(true);
+
+    }
+    if (window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.config(function($stateProvider, $urlRouterProvider) {
+
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
+  $stateProvider
+
+
+  // Each tab has its own nav history stack:
+
+  .state('home', {
+    url: '/',
+
+        templateUrl: 'templates/tab-dash.html',
+        controller: 'HomeCtrl'
+
+  })
+
+  ;
+
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/');
+
+});
+```
+
+
+
+style.css
+```
+#mapa{
+  width: 100%;
+  height: 100%;
+}
+```
+
+
+tab-dash.html
+```
+<ion-view view-title="App con Google Maps">
+  <ion-content scroll="false">
+     {{coords.latitude}},{{coords.longitude}}   
+
+     <div id="mapa">
+       
+     </div>
+
+  </ion-content>
+</ion-view>
+```
+
