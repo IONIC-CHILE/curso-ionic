@@ -215,3 +215,76 @@ app.js
 
 });
 ```
+
+
+# camara
+Este ejemplo veremos como utilizar la camara en IONIC
+
+![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/6.png?raw=true "Optional Title")
+
+
+tab-dash.html
+```
+<ion-view view-title="Camara">
+  <ion-content class="padding">
+     
+
+  <button ng-click="makeFoto()" class="button button-block button-calm">Camara</button>
+     <div class="list card">
+        <div class="item">
+           <img src="{{imagenURL}}" alt="">
+        </div>       
+     </div>
+  </ion-content>
+</ion-view>
+
+```
+
+Index.html
+```
+    <script src="lib/ngcordova/ng-cordova.js"></script>
+```
+
+
+
+controllers.js
+```
+angular.module('starter.controllers', [])
+
+.controller('HomeCtrl', function($scope,$cordovaCamera) {
+
+  
+   $scope.imagenURL = 'http://placehold.it/250x250';
+
+   $scope.makeFoto = function(){
+      
+
+      var options = {
+      quality: 50,
+      destinationType: Camera.DestinationType.DATA_URL,
+      sourceType: Camera.PictureSourceType.CAMERA,
+      allowEdit: true,
+      encodingType: Camera.EncodingType.JPEG,
+      targetWidth: 100,
+      targetHeight: 100,
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false,
+      correctOrientation:true
+    };
+
+
+   $cordovaCamera.getPicture(options)
+   .then(function(data){
+          console.log('camara informacion:' + angular.toJson(data));
+          $scope.imagenURL= 'data:image/jpeg;base64,' + data;
+       },function(error){
+          console.log('Camara Error:'+ angular.toJson(data));
+       }
+    );
+   };
+
+});
+
+```
+
+

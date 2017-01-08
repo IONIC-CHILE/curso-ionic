@@ -29,15 +29,7 @@ angular.module('starter.controllers', [])
        },function(error){
           console.log('Camara Error:'+ angular.toJson(data));
        }
-
-
     );
-
-
    };
-
-
-
-
 
 });
