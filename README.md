@@ -25,13 +25,10 @@ Este ejemplo demuestra como utilizar variables
 
 })
 ```
-
 # listCoursesSimple
 Este ejemplo utiliza una lista simple
 
 ![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/2.png?raw=true "Optional Title")
-
-
 
 # ListCourseImg
 Este ejemplo utiliza una lista simple con imagenes
@@ -50,11 +47,7 @@ $scope.cursos=[
   }
 
 ];
-
-
-})
-
-;
+});
 
 ```
 
@@ -71,7 +64,6 @@ $scope.cursos=[
   </ion-content>
 </ion-view>
 ```
-
 
 # listViewWeb
 Este ejemplo utiliza Reddit para sacar un Json y mostrarlo
@@ -113,7 +105,6 @@ angular.module('starter.controllers', [])
 Este ejemplo utiliza un menu lateral y parametros por URL
 
 ![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/5.png?raw=true "Optional Title")
-
 
 controllers.js
 ```
@@ -255,20 +246,16 @@ Index.html
     <script src="lib/ngcordova/ng-cordova.js"></script>
 ```
 
-
-
 controllers.js
 ```
 angular.module('starter.controllers', [])
 
 .controller('HomeCtrl', function($scope,$cordovaCamera) {
 
-  
    $scope.imagenURL = 'http://placehold.it/250x250';
 
    $scope.makeFoto = function(){
-      
-
+    
       var options = {
       quality: 50,
       destinationType: Camera.DestinationType.DATA_URL,
@@ -281,8 +268,6 @@ angular.module('starter.controllers', [])
       saveToPhotoAlbum: false,
       correctOrientation:true
     };
-
-
    $cordovaCamera.getPicture(options)
    .then(function(data){
           console.log('camara informacion:' + angular.toJson(data));
@@ -292,9 +277,7 @@ angular.module('starter.controllers', [])
        }
     );
    };
-
 });
-
 ```
 
 
