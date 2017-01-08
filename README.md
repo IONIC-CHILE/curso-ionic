@@ -95,3 +95,116 @@ angular.module('starter.controllers', [])
   </ion-content>
 </ion-view>
 ```
+
+
+# menulateral
+Este ejemplo utiliza un menu lateral y parametros por URL
+
+![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/5.png?raw=true "Optional Title")
+
+
+controllers.js
+```
+angular.module('starter.controllers', [])
+.controller('HomeCtrl', function($scope,$state) {
+   $scope.titulo="Cursos";
+   $scope.titulomarlon="Curso de Framework Marlon";
+   $scope.titulonodejs="Curso de NodeJS";
+
+   $scope.idcursomarlon = $state.params.id;
+
+   console.log("id");
+})
+.controller('InicioCtrl', function($scope) {
+   $scope.codigoMarlon="1";
+   $scope.codigoNodejs="2";
+})
+;
+
+```
+
+index.html
+```
+<body ng-app="menulateral">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    
+    <ion-side-menus>
+     <ion-side-menu-content>
+
+    <ion-nav-bar class="bar-stable">
+
+       <ion-nav-buttons side="left">
+          <button menu-toggle="left" class="button button-icon button-clear ion-navicon">
+            
+          </button>
+
+       </ion-nav-buttons>
+
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+     
+     </ion-side-menu-content>
+
+     
+     <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable">
+           <h2 class="title">Menu</h2>
+        </ion-header-bar>
+
+        <ion-content ng-controller="InicioCtrl">
+          <ion-list>
+             <ion-item menu-close href="#/">Inicio</ion-item>
+             <ion-item menu-close href="#/marlon/{{codigoMarlon}}">Curso Marlon</ion-item>
+             <ion-item menu-close href="#/nodejs">Curso NodeJS</ion-item>
+          </ion-list>
+        </ion-content>
+
+     <ion-side-menu>
+
+    </ion-side-menus>
+
+  </body>
+
+```
+
+app.js
+```
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+
+  // Each tab has its own nav history stack:
+
+  .state('home', {
+    url: '/',
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
+  })
+
+    .state('marlon', {
+    url: '/marlon/:id',
+        templateUrl: 'templates/cursoMarlon.html',
+        controller: 'HomeCtrl'
+  })
+
+
+    .state('nodejs', {
+    url: '/nodejs',
+        templateUrl: 'templates/cursoNodejs.html',
+        controller: 'HomeCtrl'
+  })
+  ;
+
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/');
+
+});
+```
