@@ -17,7 +17,7 @@ Este ejemplo demuestra como utilizar variables
 # 2 Ejemplo con lista
 Este ejemplo utiliza una lista simple
 
-![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/3.png?raw=true "Optional Title")
+![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/2.png?raw=true "Optional Title")
 
 
 
