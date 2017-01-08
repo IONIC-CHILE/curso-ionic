@@ -1,0 +1,11 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+         <div class="list">
+            <a class="item item-thumbnail-left"  href="{{value.url}}"  ng-repeat="value in data" target="_blank">
+               <img src="{{value.thumbnail}}" alt="" ng-if="value.thumbnail.startsWith('http')">
+               <h2 class="titulo">{{value.title}}</h2> 
+               <p>{{value.domain}}</p>             
+            </a>
+         </div> 
+  </ion-content>
+</ion-view>
