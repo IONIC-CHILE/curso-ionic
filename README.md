@@ -6,7 +6,13 @@ Este ejemplo demuestra como utilizar variables
 
 ![Alt text](https://github.com/IONIC-CHILE/curso-ionic/blob/master/img/1.png?raw=true "Optional Title")
 
+```
+.controller('DashCtrl', function($scope) {
 
+   $scope.titulo = "Ejemplo 1";
+
+})
+```
 
 # 3 Ejemplo con lista de imagenes
 Este ejemplo utiliza una lista simple con imagenes
